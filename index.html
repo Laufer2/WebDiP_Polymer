@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ColorLux</title>
+
+    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+
+    <link rel="import" href="bower_components/core-pages/core-pages.html">
+    <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+    <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+    <link rel="import" href="bower_components/core-drawer-panel/core-drawer-panel.html">
+    <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+    <link rel="import" href="bower_components/core-menu/core-menu.html">
+    <link rel="import" href="bower_components/core-item/core-item.html">
+    <link rel="import" href="bower_components/font-roboto/roboto.html">
+    <link rel="import" href="bower_components/core-icon-button/core-icon-button.html">
+
+    <link rel="import" href="moji-elementi/horizontalni-menu.html">
+    <link rel="import" href="moji-elementi/pocetna-stranica.html">
+    <link rel="import" href="moji-elementi/moja-karta.html">
+    <link rel="import" href="moji-elementi/moja-forma.html">
+    <link rel="import" href="moji-elementi/hsl-slider.html">
+    <link rel="import" href="moji-elementi/input-demo.html">
+
+    <link rel="stylesheet" href="globalni.css"/>
+    <link rel="stylesheet" href="moji-elementi/pocetna-stranica.css"/>
+
+</head>
+
+<body unresolved fullbleed layout vertical>
+<template is="auto-binding" id="temp">
+
+    <core-drawer-panel responsiveWidth="720px">
+        <core-header-panel drawer mode="waterfall" style="background-color: #FFE0B2">
+            <core-toolbar style="background-color: #FF9800">
+                <div class="bottom">O p c i j e</div>
+            </core-toolbar>
+            <core-menu selected="{{stranica}}" valueattr="str">
+                <core-item str="0">Početna stranica</core-item>
+                <core-item str="1">Forma za unos</core-item>
+                <core-item str="2">HSL-slider</core-item>
+                <core-item str="3">Google map</core-item>
+            </core-menu>
+        </core-header-panel>
+
+        <core-header-panel main mode="waterfall">
+            <core-toolbar style="background-color: #F57C00; padding-bottom: 0;">
+                <horizontalni-menu class="bottom" flex></horizontalni-menu>
+                <core-icon-button core-drawer-toggle icon="menu"></core-icon-button>
+            </core-toolbar>
+
+            <core-pages selected="{{stranica}}" valueattr="str">
+                <section str="0" >
+                    <pocetna-stranica class="pocetna"></pocetna-stranica>
+                </section>
+                <section str="1">
+                    <moja-forma></moja-forma>
+                </section>
+                <section str="2" id="slider">
+                    <hsl-slider></hsl-slider>
+                </section>
+                <section  str="3">
+                    <moja-karta></moja-karta>
+                </section>
+            </core-pages>
+
+        </core-header-panel>
+    </core-drawer-panel>
+</template>
+<script src="tranzicija.js"></script>
+</body>
+</html>

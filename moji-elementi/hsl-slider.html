@@ -1,0 +1,48 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-slider/paper-slider.html">
+
+
+<polymer-element name="hsl-slider">
+
+    <template>
+        <style>
+            paper-slider{
+                width: 90%;
+                margin: 0 auto;
+            }
+            section{
+                margin: 0 auto;
+                margin-top: 60px;
+                padding: 40px;
+                border: solid #000000 1px;
+                border-radius: 20px;
+                width: 80%;
+            }
+        </style>
+        <section style="background-color: hsl({{hue}}, {{saturation}}%, {{lightness}}%);">
+            <div center="" horizontal="" layout="">
+                <div style="font-weight: bolder">H</div>
+                <paper-slider id="hue1" value="{{hue}}" max="360" editable=""></paper-slider>
+            </div>
+            <br/>
+            <div center="" horizontal="" layout="">
+                <div style="font-weight: bolder">S</div>
+                <paper-slider id="sat1" value="{{saturation}}" max="100" editable=""></paper-slider>
+            </div>
+            <br/>
+            <div center="" horizontal="" layout="">
+                <div style="font-weight: bolder">L</div>
+                <paper-slider id="lig1" value="{{lightness}}" max="100" editable=""></paper-slider>
+            </div>
+        </section>
+    </template>
+    <script>
+        Polymer('hsl-slider', {
+            ready: function() {
+                this.hue = 94;
+                this.saturation = 65;
+                this.lightness = 44;
+            }
+        });
+    </script>
+</polymer-element>

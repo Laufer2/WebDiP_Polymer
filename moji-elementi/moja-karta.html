@@ -1,0 +1,56 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/google-map/google-map.html">
+<link rel="import" href="../bower_components/google-map/google-map-directions.html">
+<link rel="import" href="../bower_components/core-field/core-field.html">
+<link rel="import" href="../bower_components/core-icons/core-icons.html">
+
+
+<polymer-element name="moja-karta" noscript>
+
+    <template>
+        <style>
+            google-map {
+                margin: 0 auto;
+                margin-top: 10px;
+                display: block;
+                height: 500px;
+                width:98%;
+            }
+            :host(#inputs){
+                position: absolute;
+                bottom: 50px;
+                left: 50px;
+            }
+
+            core-field {
+                background: #eee;
+                border-radius: 5px;
+                margin-top: 6px;
+                margin-left: 5px;
+                width: 220px;
+            }
+
+            core-field core-icon {
+                vertical-align: middle;
+            }
+        </style>
+        <template is="auto-binding">
+            <google-map map="{{karta}}" latitude="46.19" longitude="16.20"></google-map>
+            <google-map-directions map="{{karta}}" startAddress="{{pocetak}}" endAddress="{{kraj}}">
+            </google-map-directions>
+
+            <div id="inputs">
+                <core-field>
+                    <core-icon icon="icons:search"></core-icon>
+                    <input placeholder="Polazak" value="{{pocetak}}">
+                </core-field>
+                <core-field>
+                    <core-icon icon="icons:search"></core-icon>
+                    <input placeholder="Odredište" value="{{kraj}}">
+                </core-field>
+                <a href="https://googlewebcomponents.github.io/" target="_blank">
+                    <core-icon icon="link"></core-icon></a>
+            </div>
+        </template>
+    </template>
+</polymer-element>

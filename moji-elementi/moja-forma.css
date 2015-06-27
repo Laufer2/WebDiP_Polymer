@@ -1,0 +1,26 @@
+moja-forma::shadow section{
+    float: left;
+    width: 46%;
+    margin: 2%;
+}
+
+moja-forma /deep/ paper-input{
+    width: 90%;
+}
+moja-forma /deep/ #demo-linkovi{
+    padding-top: 20px;
+}
+moja-forma /deep/ .icon-larger{
+    width: 90px;
+    height: 90px;
+}
+
+
+@media screen and (max-width: 720px) {
+    moja-forma /deep/ #demo-linkovi, moja-forma /deep/ #input-primjeri {
+        float: none;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,84 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../bower_components/core-menu/core-menu.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-dropdown/paper-dropdown.html">
+<link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../bower_components/core-label/core-label.html">
+<link rel="import" href="../bower_components/paper-radio-button/paper-radio-button.html">
+<link rel="import" href="../bower_components/paper-radio-group/paper-radio-group.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-input/paper-char-counter.html">
+<link rel="import" href="../bower_components/paper-spinner/paper-spinner.html">
+<link rel="import" href="../bower_components/paper-input/paper-input-decorator.html">
+<link rel="import" href="../bower_components/paper-input/paper-char-counter.html">
+
+<link rel="import" href="../bower_components/core-icons/core-icons.html">
+<link rel="import" href="../bower_components/paper-fab/paper-fab.html">
+
+<link rel="stylesheet" href="moja-forma.css"/>
+
+<polymer-element name="moja-forma">
+
+    <template>
+        <section id="input-primjeri">
+
+            <paper-input label="Vaše ime" floatinglabel value="{{ime}}"></paper-input><br/>
+
+            <paper-input label="Vaše prezime" floatinglabel value="{{prezime}}"></paper-input><br/>
+            <paper-dropdown-menu label="Odaberite županiju">
+                <paper-dropdown class="dropdown">
+                    <core-menu class="menu">
+                        <paper-item>Varaždinska</paper-item>
+                        <paper-item>Zagrebačka</paper-item>
+                        <paper-item>Krapinsko-zagorska</paper-item>
+                        <paper-item>Dubrovačka</paper-item>
+                        <paper-item>Osječko-baranjska</paper-item>
+                    </core-menu>
+                </paper-dropdown>
+            </paper-dropdown-menu><br/>
+            <paper-checkbox checked="false" label="Označi me" style="margin-top: 20px;"></paper-checkbox><br/>
+            <p style="padding:0; margin:0; margin-top: 25px; font-size: 18px;">Spol</p>
+            <paper-radio-group selected="muski">
+                <paper-radio-button name="muski" label="Muški"></paper-radio-button>
+                <paper-radio-button name="zenski" label="Ženski" ></paper-radio-button>
+            </paper-radio-group><br/><br/>
+            <paper-button raised on-click="{{prikazi}}">OK</paper-button>
+            <paper-button raised>Cancel</paper-button><br/><br/>
+
+            <paper-spinner active></paper-spinner>
+            <paper-spinner active></paper-spinner>
+            <paper-spinner active></paper-spinner>
+            <paper-spinner active></paper-spinner>
+            <paper-spinner active></paper-spinner>
+
+        </section>
+        <section id="demo-linkovi" >
+            <a href="../bower_components/paper-input/demo.html" target="_blank">
+                <core-icon class="icon-larger" icon="link"></core-icon></a>
+            <core-icon class="icon-larger" icon="save"></core-icon>
+            <core-icon class="icon-larger" icon="android" style="color:#A4C639"></core-icon>
+            <core-icon class="icon-larger" icon="attachment" style="color:#ff4081"></core-icon>
+            <core-icon class="icon-larger" icon="arrow-back" style="color:#0097A7"></core-icon>
+            <core-icon class="icon-larger" icon="cloud-done" style="color:#00BCD4"></core-icon>
+            <core-icon class="icon-larger" icon="extension" style="color:#8BC34A"></core-icon>
+            <core-icon class="icon-larger" icon="thumb-up" style="color:#795548"></core-icon>
+            <core-icon class="icon-larger" icon="translate" style="color:#FF5722"></core-icon>
+            <a href="../bower_components/core-icon/demo.html" target="_blank">
+                <core-icon class="icon-larger" icon="polymer"></core-icon></a>
+            <br/><br/><br/>
+            <paper-fab icon="add" style="margin-left: 40%"></paper-fab>
+            <br/><br/><br/>
+            <p style="font-size:24px;">{{ime2}} {{prezime2}}</p>
+        </section>
+    </template>
+    <script>
+        Polymer('moja-forma',{
+            prikazi: function(e,detail,sender){
+                this.ime2 = this.ime;
+                this.prezime2 = this.prezime;
+            }
+        });
+    </script>
+</polymer-element>

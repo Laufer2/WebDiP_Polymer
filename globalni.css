@@ -1,0 +1,13 @@
+body{
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    color: #212121;
+    background-color: hsl(0,0%,85%);
+}
+
+horizontalni-menu{
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+}
+

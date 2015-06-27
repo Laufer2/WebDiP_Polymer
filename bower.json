@@ -1,0 +1,29 @@
+{
+  "name": "webdip_seminar",
+  "version": "0.0.0",
+  "description": "Seminar iz kolegija Web dizajn i programiranje",
+  "main": "index.html",
+  "keywords": [
+    "polymer",
+    "webdip"
+  ],
+  "authors": [
+    "Risbo"
+  ],
+  "license": "MIT",
+  "homepage": "polymer.risbo.uphero.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.5",
+    "core-elements": "Polymer/core-elements#~0.5.5",
+    "paper-elements": "Polymer/paper-elements#~0.5.5",
+    "google-map": "GoogleWebComponents/google-map#~0.4.2",
+    "paper-calculator": "Polymer/paper-calculator#~0.5.5"
+  }
+}

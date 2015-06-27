@@ -1,0 +1,44 @@
+pocetna-stranica::shadow .gornji,. donji{
+    display: block;
+}
+pocetna-stranica::shadow section {
+    float: left;
+    width: 46%;
+    height: 300px;
+    margin: 2%;
+    font-size: 24px;
+}
+
+pocetna-stranica::shadow a:link{
+    text-decoration: none;
+    color: black;
+}
+pocetna-stranica /deep/ #prvi{
+    background-color:#4CAF50;
+}
+pocetna-stranica /deep/ #drugi{
+    background-color: #03A9F4;
+}
+
+pocetna-stranica /deep/ #treci{
+    background-color: #E91E63;
+}
+
+pocetna-stranica /deep/ #cetvrti{
+    background-color:#FF5722;
+}
+
+@media screen and (max-width: 720px) {
+    pocetna-stranica /deep/ #prvi, pocetna-stranica /deep/ #drugi {
+        float: none;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    pocetna-stranica /deep/ #treci, pocetna-stranica /deep/ #cetvrti{
+        float: none;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}
